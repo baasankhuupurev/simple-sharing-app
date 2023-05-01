@@ -20,7 +20,7 @@ export default ({ children }) => {
               <Logo />
               {children}
             </div>
-            <ul className="ml-4 flex items-center">
+            <ul className="labtop:ml-4 tablet:ml-1 flex items-center">
               {state.isLogin ? (
                 <>
                   <li>
