@@ -7,7 +7,7 @@ export default () => {
   return (
     <>
       <Navbar />
-      <div className="min-h-screen px-20 py-10 bg-gray-800  ">
+      <div className="min-h-screen labtop:px-20 tablet:px-5 tablet:mb-20 py-10 bg-gray-800  ">
         <Editable />
       </div>
       <Footer />

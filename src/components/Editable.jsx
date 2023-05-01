@@ -61,8 +61,8 @@ export default () => {
   return (
     <>
       {categories && (
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 ">
-          <div className="flex flex-wrap -mx-3 mb-6 justify-between">
+        <div className="labtop:container labtop:mx-auto px-4 sm:px-6 lg:px-8 ">
+          <div className="labtop:flex labtop:flex-wrap labtop:mx-3 labtop:mb-6 labtop:justify-between">
             <div className="w-full px-3 my-2">
               <input
                 className="w-full px-4 py-2 leading-tight text-gray-700 bg-gray-50 rounded shadow"
@@ -71,7 +71,7 @@ export default () => {
                 onChange={(e) => setTitle(e.target.value)}
               />
             </div>
-            <div className="w-1/3 px-3 my-2 z-10">
+            <div className="labtop:w-1/3 px-3 my-2 z-10">
               <Select
                 value={category}
                 options={categories}
@@ -80,7 +80,7 @@ export default () => {
                 required
               />
             </div>
-            <div className="w-1/3 px-3 my-2">
+            <div className="labtop:w-1/3 px-3 my-2">
               <input
                 className="w-full px-4 py-2 leading-tight text-gray-700 bg-gray-50 rounded shadow"
                 placeholder="Enter the cover image path here."
@@ -88,7 +88,7 @@ export default () => {
                 onChange={(e) => setBanner(e.target.value)}
               />
             </div>
-            <div className="w-1/3 px-3 my-2">
+            <div className="labtop:w-1/3 px-3 my-2">
               <input
                 className="w-full px-4 py-2 leading-tight text-gray-700 bg-gray-50 rounded shadow"
                 placeholder="Enter your link to read more"
@@ -131,7 +131,7 @@ export default () => {
               />
               <button
                 onClick={Postsend}
-                className={` mt-4 bg-green-600 hover:bg-green-500 text-white font-bold py-2 px-4 rounded`}
+                className={`tablet:mb-20 mt-4 bg-green-600 hover:bg-green-500 text-white font-bold py-2 px-4 rounded`}
               >
                 Submit
               </button>
