@@ -32,12 +32,12 @@ export default () => {
       <Navbar />
       {data && (
         <>
-          <div className="flex mx-10 mt-10 mb-20">
-            <div className="w-3/4 mx-10 border-gray-200  p-10 border-2 rounded-md">
+          <div className="laptop:flex mx-10 mt-10 mb-20">
+            <div className="laptop:w-3/4 laptop:mx-10 border-gray-200 p-10 border-2 rounded-md">
               <div className="text-gray-600 text-5xl m-5 font-medium text-left">
                 {data.Title}
               </div>
-              <div className="flex flex-row items-center my-2 hover:cursor-pointer">
+              <div className="laptop:flex laptop:flex-row items-center my-2 hover:cursor-pointer">
                 <img
                   onClick={() => {}}
                   className="w-12 h-12 mx-2 rounded-full"
@@ -63,7 +63,7 @@ export default () => {
               </div>
               <div dangerouslySetInnerHTML={{ __html: data.content }}></div>
             </div>
-            <div className="w-1/4 h-1/2">
+            <div className="laptop:w-1/4 laptop:h-1/2">
               <div className="p-5 border-2 border-gray-200 rounded-xl">
                 <img
                   className=" w-16 h-16 rounded-full"

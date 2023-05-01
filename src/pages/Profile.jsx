@@ -24,8 +24,8 @@ export default () => {
     <>
       {userProfile && (
         <div className="flex flex-row justify-center min-h-screen bg-gray-800">
-          <div className="w-1/4"></div>
-          <div className="w-2/4 flex flex-col p-5 overflow-auto border-l border-r border-gray-500">
+          <div className="laptop:w-1/4 tablet:hidden"></div>
+          <div className="laptop:w-2/4 flex flex-col p-5 overflow-auto border-l border-r border-gray-500">
             <div className="my-2 p-2 rounded shadow-gray-700 shadow-sm">
               <IoIosArrowRoundBack
                 onClick={() => window.history.go(-1)}
@@ -126,7 +126,7 @@ export default () => {
               </div>
             </div>
           </div>
-          <div className="w-1/4"></div>
+          <div className="laptop:w-1/4 tablet:hidden"></div>
         </div>
       )}
     </>
