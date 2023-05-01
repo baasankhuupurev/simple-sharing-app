@@ -90,7 +90,7 @@ export default () => {
                 <div className=" text-gray-600 font-medium mt-1">
                   Collection
                 </div>
-                <div className=" grid grid-cols-1 tablet:grid-cols-43laptop:grid-cols-4 desktop:grid-cols-5">
+                <div className=" grid grid-cols-4 tablet:grid-cols-4 laptop:grid-cols-4 desktop:grid-cols-5">
                   {collection &&
                     collection.length > 0 &&
                     collection.map((el) => {

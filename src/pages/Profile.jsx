@@ -34,7 +34,7 @@ export default () => {
               <img
                 src={`${RestApiUrl + "/image/auth/" + state.photo}`}
                 alt="Author"
-                className="max-w-24 max-h-24 rounded-full mx-auto border-2 border-gray-400"
+                className=" max-w-24 max-h-24 rounded-full mx-auto border-2 border-gray-400"
               />
               <div className=" items-center">
                 <div className=" text-xl text-center text-gray-200 font-bold">
@@ -89,7 +89,7 @@ export default () => {
                       console.log(el);
                       return (
                         <a
-                          className="w-full h-2/3 px-1 py-1 rounded relative"
+                          className="tablet:w-1/4 labtop:w-full h-2/3 px-1 py-1 rounded relative"
                           href={`post/${el._id}`}
                         >
                           <div
