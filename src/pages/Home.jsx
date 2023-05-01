@@ -27,7 +27,7 @@ export default () => {
         <CustomSearch onChange={(e) => setSearch(e.target.value)} />
       </Navbar>
       {filterData && filterData.length > 0 && (
-        <div className="px-20 py-10 grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 desktop:grid-cols-4">
+        <div className="desktop:px-20 desktop:py-10 laptop:px-10 laptop:py-10 tablet:px-12 tablet:py-10 grid grid-cols-1  tablet:grid-cols-2 laptop:grid-cols-3 desktop:grid-cols-4">
           {filterData.map((post, index) => (
             <Item key={index} {...post} />
           ))}
