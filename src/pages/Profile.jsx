@@ -23,57 +23,57 @@ export default () => {
   return (
     <>
       {userProfile && (
-        <div className="flex flex-row justify-center min-h-screen bg-gray-800">
-          <div className="laptop:w-1/4 tablet:hidden"></div>
-          <div className="laptop:w-2/4 flex flex-col p-5 overflow-auto border-l border-r border-gray-500">
-            <div className="my-2 p-2 rounded shadow-gray-700 shadow-sm">
+        <div className="flex min-h-screen flex-row justify-center bg-gray-800">
+          <div className="tablet:hidden laptop:w-1/4"></div>
+          <div className="flex flex-col overflow-auto border-l border-r border-gray-500 p-5 laptop:w-2/4">
+            <div className="my-2 rounded p-2 shadow-sm shadow-gray-700">
               <IoIosArrowRoundBack
                 onClick={() => window.history.go(-1)}
-                className="text-2xl cursor-pointer rounded-full border border-gray-400 text-gray-400 hover:border-white hover:text-white"
+                className="cursor-pointer rounded-full border border-gray-400 text-2xl text-gray-400 hover:border-white hover:text-white"
               />
               <img
                 src={`${RestApiUrl + "/image/auth/" + state.photo}`}
                 alt="Author"
-                className=" max-w-24 max-h-24 rounded-full mx-auto border-2 border-gray-400"
+                className=" max-w-24 mx-auto max-h-24 rounded-full border-2 border-gray-400"
               />
               <div className=" items-center">
-                <div className=" text-xl text-center text-gray-200 font-bold">
+                <div className=" text-center text-xl font-bold text-gray-200">
                   {userProfile.username}
                 </div>
-                <div className="font-medium text-xs text-center text-green-500 capitalize cursor-pointer hover:underline">
+                <div className="cursor-pointer text-center text-xs font-medium capitalize text-green-500 hover:underline">
                   edit profile
                 </div>
               </div>
             </div>
-            <div className="my-2 p-2 rounded shadow-gray-700 shadow-sm">
+            <div className="my-2 rounded p-2 shadow-sm shadow-gray-700">
               <div className="m-4">
-                <h1 className=" text-2xl text-gray-200  border-b border-b-gray-600">
+                <h1 className=" border-b border-b-gray-600  text-2xl text-gray-200">
                   About
                 </h1>
-                <p className="text-xs text-gray-200 mt-2">
+                <p className="mt-2 text-xs text-gray-200">
                   &nbsp;&nbsp;&nbsp;{userProfile.about}
                 </p>
               </div>
             </div>
-            <div className="my-2 p-2 rounded shadow-gray-700 shadow-sm">
+            <div className="my-2 rounded p-2 shadow-sm shadow-gray-700">
               <div className="m-4">
-                <h1 className=" text-2xl text-gray-200 border-b border-b-gray-600">
+                <h1 className=" border-b border-b-gray-600 text-2xl text-gray-200">
                   Information
                 </h1>
                 <div className="grid grid-cols-2">
                   <div className="flex">
-                    <p className="text-xs text-white mt-2 font-medium">
+                    <p className="mt-2 text-xs font-medium text-white">
                       Email:{" "}
                     </p>
-                    <p className=" text-xs text-gray-300 mt-2">
+                    <p className=" mt-2 text-xs text-gray-300">
                       &nbsp;&nbsp;{userProfile.email}
                     </p>
                   </div>
                   <div className="flex">
-                    <p className="text-xs text-white mt-2 font-medium">
+                    <p className="mt-2 text-xs font-medium text-white">
                       Phone:{" "}
                     </p>
-                    <p className=" text-xs text-gray-300 mt-2">
+                    <p className=" mt-2 text-xs text-gray-300">
                       &nbsp;&nbsp;{userProfile.phone}
                     </p>
                   </div>
@@ -81,7 +81,7 @@ export default () => {
               </div>
             </div>
             {collection && (
-              <div className="my-2 p-2 rounded shadow-gray-700 shadow-sm">
+              <div className="my-2 rounded p-2 shadow-sm shadow-gray-700">
                 <div className="m-4">
                   <h1 className=" text-2xl text-gray-200">Collection</h1>
                   <div className="grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 desktop:grid-cols-4">
@@ -89,11 +89,11 @@ export default () => {
                       console.log(el);
                       return (
                         <a
-                          className="tablet:w-1/4 labtop:w-full h-2/3 px-1 py-1 rounded relative"
+                          className="relative h-2/3 w-full rounded px-1 py-1"
                           href={`post/${el._id}`}
                         >
                           <div
-                            className="flex bottom-2 right-3 absolute justify-center items-center bg-green-600 px-1"
+                            className="absolute bottom-2 right-3 flex items-center justify-center bg-green-600 px-1"
                             style={{ fontSize: 10 }}
                           >
                             <FaHeart className=" text-white" />
@@ -105,7 +105,7 @@ export default () => {
                             </div>
                           </div>
                           <img
-                            className="w-full h-full rounded hover:border-2 border-gray-800"
+                            className="h-full w-full rounded border-gray-800 hover:border-2"
                             src={el.Banner}
                             alt={el.Title}
                             title={el.Title}
@@ -117,7 +117,7 @@ export default () => {
                 </div>
               </div>
             )}
-            <div className=" my-2 p-2 rounded shadow-gray-700 shadow-sm">
+            <div className=" my-2 rounded p-2 shadow-sm shadow-gray-700">
               <div className="m-4">
                 <h1 className=" text-2xl text-gray-200">Stats</h1>
                 <div className="flex">
@@ -126,7 +126,7 @@ export default () => {
               </div>
             </div>
           </div>
-          <div className="laptop:w-1/4 tablet:hidden"></div>
+          <div className="tablet:hidden laptop:w-1/4"></div>
         </div>
       )}
     </>
